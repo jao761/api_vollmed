@@ -1,4 +1,4 @@
-package med.voll.api.endereco;
+package med.voll.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
@@ -27,6 +27,34 @@ public class Endereco {
         this.complemento = dados.complemento();
         this.cidade = dados.cidade();
         this.uf = dados.uf();
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getUf() {
+        return uf;
     }
 
     public void atualizarInformacoes(DadosEndereco dados) {
